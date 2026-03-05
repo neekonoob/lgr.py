@@ -1,8 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-
+from sklearn.metrics import accuracy_score, classification_report
 #  Load dataset
 
 df = pd.read_csv("E:\\py\\random project\\lgr.py\\predictive_maintenance.csv")  # Update with your actual path
@@ -34,8 +33,8 @@ y_pred = model.predict(X_test)
 
 #  Check accuracy
 print("Accuracy:", accuracy_score(y_test, y_pred))
-print(model.coef_)   # weights
-print(model.intercept_)  # bias
+print("\nClassification Report:\n")
+print(classification_report(y_test, y_pred))
 # Predict probability of failure   
 air_temperature = float(input("Enter Air temperature [K]: "))
 process_temperature = float(input("Enter Process temperature [K]: ")) 
