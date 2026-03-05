@@ -4,6 +4,8 @@ Make sure to read requirment.txt to see what lib you need :
 python 3.14
 python -m pip install sklearn 
 python -m pip install pandas 
-Run the code in any terminal that has python in it 
+python -m pip install fsspec
+Run the code in any terminal that has python in it with 
+python -m {your file path}
 linear regression CAN NOT BE USED ( so substitube with logistic regression)
 github link https://github.com/neekonoob/lgr.py
